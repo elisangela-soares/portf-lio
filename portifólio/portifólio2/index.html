@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Portifólio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+    <style>
+        body {
+            margin-left: 15%;
+            margin-right: 15%;
+            background-color: lightgray
+        }
+        .container {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: 1fr;
+        }
+        #header {
+            font-family: poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 42px;
+            text-decoration-line: underline;
+
+            color: #070f18;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        #menu {
+            text-align: right;
+            margin-top: 49px;
+        }
+        #menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        #menu li{
+            display: inline-block;
+            margin-left: 20px;
+            font-family: poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            /*.identical.to.box.height.*/;
+            text-align: center;
+            color: #070f18;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+        }
+       #buttonCta {
+            background: #1F7CFF;
+            border-radius: 50ox;
+            font-family: poppins;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            /*.identical.to.box.height.*/;
+            text-align: center;
+            color: #FFFFFF;
+            padding: 10px 25px 10px 25px;
+       } 
+       p.gray {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 32px;
+            /*.identical.to.box.height.*/;
+            color: #575455;
+       }
+       #headerCta h1 {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 45px;
+            /*.identical.to.box.height.*/;
+            color: #000000;
+            text-shadow: 2px 1px 1px #111111;
+       }
+       #img {
+            margin-left: 42px;
+       }
+       #headerImg img {
+            width: 100%;
+       }
+       body img {
+            width: 300px;
+            height: 300px;
+       }
+       
+       .headerLogo {
+            text-align:center;
+       }
+       .headerlogo img {
+        width: 100%;
+        width: 50px;
+        margin: 20;
+        height: 50px;
+        padding: 20px;
+       }
+       #clients {
+            margin-top: 50px;
+            margin-bottom: 50px;
+       }
+       #headerClientsText {
+            font-family: poppins;
+            font-style: normal;
+            font-size: 16px;
+            line-height: 24px;
+            /*.identical.to.box.height.*/;
+            color: #070f18;
+       }
+       #p img{
+            width: 0px;
+            height: 0px;
+            display: flex;
+            justify-content: space-between;
+            padding: center;
+       }
+       h2.red {
+            font-family: poppins;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 24px;
+            /*.identical.to.box.height.*/;
+            color: #F75C4E;
+       }
+       h1.black {
+            font-family: poppins;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 54px;
+            /*.identical.to.box.height.*/;
+            margin-top: 0;
+            color: #000000;
+       }
+       .textCenter {
+        text-align: center;
+       }
+       .textCenter img {
+        width: 100%;
+        width: 70px;
+        margin: 30;
+        height: 60px;
+        padding: 30px;
+       }
+       #services .textCenter h3 {
+            font-family: poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 30px;
+            /*.identical.to.box.height.*/;
+            color: #070F18;
+       }
+       #contactImg img {
+           width: 100%;
+       }
+       #contactForm {
+           margin-left: 75px;
+           text-align: left;
+       }
+       #contact {
+        margin-top: 100px;
+       }
+       #contatForm input {
+        background: #F5F6FB;
+        border-radius: 50px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        /*.identical.to.box.height.*/;
+        color: #575455;
+        border:0;
+        width: 70%;
+        padding: 15px 30px 15px 30px; 
+       }
+       #contactForm button {
+        background: #1F7CFF;
+        border-radius: 50px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        /*.identical.to.box.height.*/;
+        text-align: center;
+        border: 0;
+        color: #FFFFFF;
+        padding: 15px 30px 15px 30px; 
+       }
+       #portifólioTitle {
+        margin-top: 150px;
+       }
+       .portifólioImg img {
+        width: 200%;
+        width: 200px;
+        margin: 30;
+        height: 150px;
+        padding: 30px;
+       }
+       .portifólioImg {
+        padding: 30px;
+       }
+       .efeito {
+        background-color: rgba (0, 0, 0, 0,5);
+       }
+       #menu  ul a:hover {
+        padding: 20px 20px;
+        background-color: gray
+       }
+
+       
+    </style>
+    </head>
+    <body>
+        <div class="container">
+        <div id="header">
+             Portifólio
+        </div>
+         <div id="menu">
+            <ul>   
+               <li><a href="#services">Meus Serviços</a></li>
+               <li><a href="#contact">Fale Comigo</a></li>
+               <li><a href="#portifólioTitle">Portifólio</a></li>
+            </ul>
+        </div>
+          
+       </div>  
+       <div class="container">
+           <div id="headerCta" call to action>
+            <h1>
+                Olá, meu nome<br>
+                é Elisângela
+            </h1>
+            <p class="gray">
+                Sou programadora e gostaria de apresentar meu<br>
+                trabalho para você através deste portifólio
+
+            <div></div>
+            <a id="buttonCta" href="">Meus Serviços</a>
+           </div>
+           <div id="headerimg">
+            <img src="img/fotoeli.jpg">
+           </div> 
+        </div>
+        <div class="container" id="clients">
+            <div id="headerClientText">
+                Alguns dos<br>
+                meus clientes
+            </div>
+                <!-- falta ver pendência nas imagens-->
+                <div class="container">
+            <div class="headerlogo">
+                <img src="img/apple-logo.webp">
+            </div>
+            <div class="headerlogo">
+                <img src="img/gettyimages-1151037249-612x612.jpg">
+            </div>
+            <div class="headerlogo">
+                <img src="img/spotify-premium-akcio-001-1024x576.webp">
+            </div>
+        </div>
+        </div>
+        <div class="container textCenter">
+            <div id="services">
+                <h2 class="red">Conheça</h2>
+                <h1 class="black">Meus Serviços</h1>
+            </div>
+        </div>
+        <!--falta ver pendência nas imagens--> 
+        <div class="container">
+            <div class="textCenter" id="services">
+                <img src="img/images.jpg">
+                <h3>Consultoria</h3>
+                <p class="gray">Te ajudo a organizar sua empresa<br>
+                   e melhorar seus resultados.
+            </p>
+            </div>
+            <div class="textCenter">
+                <img src="img/4-erros-de-email-marketing-que-destroem-a-sua-campanha.jpeg">
+                <h3>E-mail Marketing</h3>
+                <p class="gray">Gerenciar campanhas é difícil.<br>
+                   Conte comigo para te ajudar</p>
+            </div>
+            <div class="textCenter">
+                <img src="img/883676750935141b3427b7ac1feb952e.jpg">
+                <h3>Criação de sites</h3>
+                <p class="gray">Desenvolvo o site inteiro<br>
+                   do zero e te entrego prontinho</p>
+
+            </div>
+        </div>
+        <div class="container" id="contact">
+             <div id="contactimg">
+               <img src="img/images (1).jpg".jpg>   
+             </div>
+             <div id="contactForm">
+                <h2 class="red">Economize seu tempo</h2>
+                <h1 class="black">Ganhe mais dinheiro</h1>
+                <p clss="gray">
+                    Digite aqui seu endereço de e-mail. Eu entrarei em<br>
+                    contato para fornecer um diagnóstico gratuito.
+                </p>
+                <form action="https://formspree.io/f/xgeqpqzd" method="POST">
+                    <p><input placeholder="Seu e-mail" type="text" name="contactEmail" required="required"></p> 
+                    <button  type="submit">Enviar</button>
+                </form>
+             </div>
+        </div>
+        <div class="container" id="portifólioTitle">
+            <div > 
+                <h2 class="red">Conheça meu trabalho</h2>
+                <h1 class="black">Portifólio</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="portifólioImg">
+                <img src="img/ensino-secundário-superior-e-conceito-de-pessoas-estudante-sorridente-lendo-livro-feliz-na-biblioteca-172068379.jpg">
+                </div>
+            <div class="portifólioImg">
+                <img src="img/retrato-de-conceito-de-negocio-de-homem-animado-com-a-boca-aberta-vestido-com-roupa-formal-dando-sinal-de-positivo_1258-80644.webp">
+                </div>
+            <div class="portifólioImg">
+                <img src="img/question-solution-symbol-businessman-turns-260nw-1918892036.webp">
+                </div>
+        </div>
+    </div>
+</body>
+</html>
